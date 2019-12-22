@@ -3,6 +3,7 @@ import tkinter.messagebox as msgbox
 
 
 def functions(e):
+  #get the text of the button which was clicked
   text=str(e.widget.configure().get("text")[-1])
   if("=" in varEntry1.get()):
     if(text=="clear"):
