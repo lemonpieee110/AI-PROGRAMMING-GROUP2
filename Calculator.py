@@ -71,6 +71,7 @@ for i in fh:
 
 
 #= button
+#the equals button has to be separated cause its doing more than giving inputting infos
 btnEquals=tk.Button(f1,text="=",width=6,command=btnEquals_Click)
 btnEquals.grid(row=ro+1,column=0,columnspan=4,sticky=tk.EW)
 
