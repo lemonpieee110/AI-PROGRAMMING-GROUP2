@@ -22,6 +22,8 @@ def functions(e):
     varEntry1.set(varEntry1.get()+text)
   pass
 
+
+
 def btnEquals_Click():
   try:
     result=eval(varEntry1.get())
