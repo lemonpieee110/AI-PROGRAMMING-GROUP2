@@ -26,6 +26,7 @@ def functions(e):
 
 def btnEquals_Click():
   try:
+    
     result=eval(varEntry1.get())
     varEntry1.set(varEntry1.get()+"="+str(result))
   except:
@@ -38,7 +39,7 @@ def btnEquals_Click():
 form1=tk.Tk()
 form1.title("calculator")
 form1.geometry("300x305")
-form1.iconbitmap("calculator.ico")
+
 
 
 
