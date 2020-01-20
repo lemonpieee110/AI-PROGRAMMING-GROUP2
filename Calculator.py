@@ -22,11 +22,17 @@ def functions(e):
     varEntry1.set(varEntry1.get()+text)
   pass
 
-
+#powFunction can directly use '**',coded this function for differentiating from '*'
+def powFunc(line):
+  temp = line.split("pow");#split by pow to recognize which number to pow 
+  return str(float(temp[0])**float(temp[1]))#after spliting 'temp',it has become a list so its temp[0] pows temp[1](the number before 'pow' and the number after 'pow')
 
 def btnEquals_Click():
   try:
-    
+    if("pow" in varEntry1.get()):#if pow was used in the calculator,process like below
+      pow1=varEntry1.get();
+      varEntry1.set(powFunc(pow1))
+else:
     result=eval(varEntry1.get())
     varEntry1.set(varEntry1.get()+"="+str(result))
   except:
