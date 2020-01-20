@@ -52,7 +52,7 @@ def btnEquals_Click():
 #load frame
 form1=tk.Tk()
 form1.title("calculator")
-form1.geometry("300x305")
+form1.geometry("292x343")
 
 
 
