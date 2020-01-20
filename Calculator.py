@@ -27,12 +27,20 @@ def powFunc(line):
   temp = line.split("pow");#split by pow to recognize which number to pow 
   return str(float(temp[0])**float(temp[1]))#after spliting 'temp',it has become a list so its temp[0] pows temp[1](the number before 'pow' and the number after 'pow')
 
+#suqareRoot function using imported 'math Library' for using "√" calculation
+def squareRoot(line):
+  temp = line.split("√");
+  return str(cm.sqrt(float(temp[1])))#find the number after '√' and use sqrt() from math library then return it in string
+
 def btnEquals_Click():
   try:
     if("pow" in varEntry1.get()):#if pow was used in the calculator,process like below
       pow1=varEntry1.get();
       varEntry1.set(powFunc(pow1))
 else:
+  elif("√" in varEntry1.get()):#if √ was used in the calculator,process like below
+      sqr1=varEntry1.get()
+      varEntry1.set(squareRoot(sqr1))
     result=eval(varEntry1.get())
     varEntry1.set(varEntry1.get()+"="+str(result))
   except:
