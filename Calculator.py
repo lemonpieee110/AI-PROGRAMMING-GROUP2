@@ -37,12 +37,12 @@ def btnEquals_Click():
     if("pow" in varEntry1.get()):#if pow was used in the calculator,process like below
       pow1=varEntry1.get();
       varEntry1.set(powFunc(pow1))
-else:
-  elif("√" in varEntry1.get()):#if √ was used in the calculator,process like below
+    elif("√" in varEntry1.get()):#if √ was used in the calculator,process like below
       sqr1=varEntry1.get()
       varEntry1.set(squareRoot(sqr1))
-    result=eval(varEntry1.get())
-    varEntry1.set(varEntry1.get()+"="+str(result))
+    else:
+      result=eval(varEntry1.get())
+      varEntry1.set(varEntry1.get()+"="+str(result))
   except:
     msgbox.showerror("error","please enter the right formula")
   pass
@@ -76,7 +76,7 @@ col=0
 
 
 #create buttons
-fh=[7,8,9,"*",4,5,6,"-",1,2,3,"+",0,".","/","%","clear","backspace","^","INFO"]
+fh=[7,8,9,"*",4,5,6,"-",1,2,3,"+",0,".","/","%","(",")","pow","√","clear","backspace","^","INFO"]
 for i in fh:
   if(col!=0 and col%4==0):
     ro+=1 #br
