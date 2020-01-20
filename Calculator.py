@@ -62,12 +62,15 @@ form1.geometry("292x343")
 #part1
 #get input(entry)
 varEntry1=tk.StringVar()
+#setting style of input textbox
 entry1=tk.Entry(form1,fg="white",bg="black",textvariable=varEntry1)
+#setting positon of textbox
 entry1.grid(row=0,column=0,sticky=tk.EW,ipady=5)
 
 #part2
 #create frame
 f1=tk.Frame(form1)
+#the position that buttons starts from
 f1.grid(row=1,column=0)
 
 
@@ -78,11 +81,12 @@ col=0
 
 #create buttons
 fh=[7,8,9,"*",4,5,6,"-",1,2,3,"+",0,".","/","%","(",")","pow","√","clear","backspace","^","INFO"]
+#using for loop to get all the buttons in the list
 for i in fh:
-  if(col!=0 and col%4==0):
-    ro+=1 #br
+  if(col!=0 and col%4==0):#if its already the fourth cell↓ 
+    ro+=1 #go to the next row(br)↓
     col=0 #make the column start from 1 everytime br
-  btn1=tk.Button(f1,text=i,width=9,height=2)
+  btn1=tk.Button(f1,text=i,width=9,height=2)#buttons' size
   btn1.bind("<Button-1>",functions)
   btn1.grid(row=ro,column=col)
   col+=1
