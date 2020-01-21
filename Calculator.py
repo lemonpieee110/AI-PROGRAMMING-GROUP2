@@ -1,7 +1,8 @@
 import tkinter as tk
+from tkinter import Menu as mu
 import tkinter.messagebox as msgbox
 import math as cm
-from tkinter.messagebox as msgbox
+
 
 def functions(e):
   #get the text of the button which was clicked
