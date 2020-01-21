@@ -17,8 +17,8 @@ def functions(e):
     varEntry1.set("")
   elif(text=="backspace"):
     varEntry1.set(varEntry1.get()[0:len(varEntry1.get())-1])
-  elif(text=="INFO"):
-    msgbox.showinfo("INFO","AI Programming group2")
+  elif(text=="1/x"):
+    varEntry1.set(str(1/float(varEntry1.get())))
   else:
     varEntry1.set(varEntry1.get()+text)
   pass
@@ -56,6 +56,15 @@ form1.title("calculator")
 #setting size
 form1.geometry("292x343")
 
+#show info function
+def msg():
+  msgbox.showinfo("INFO","AI Programming group2 project")
+#initialize menu of form1(the frame)
+menubar=mu(form1)
+#set a menubar named INFO and if clicked use msg()
+menubar.add_command(label="INFO",command=msg)
+#bind menubar to the frame
+form1['menu']=menubar
 
 
 
@@ -81,7 +90,7 @@ col=0
 
 
 #create buttons
-fh=[7,8,9,"*",4,5,6,"-",1,2,3,"+",0,".","/","%","(",")","pow","√","clear","backspace","^","INFO"]
+fh=[7,8,9,"*",4,5,6,"-",1,2,3,"+",0,".","/","%","(",")","pow","√","clear","backspace","^","1/x"]
 #using for loop to get all the buttons in the list
 for i in fh:
   if(col!=0 and col%4==0):#if its already the fourth cell↓ 
