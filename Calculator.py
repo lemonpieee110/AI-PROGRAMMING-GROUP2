@@ -55,7 +55,7 @@ def btnEquals_Click():
 form1=tk.Tk()
 form1.title("calculator")
 #setting size
-form1.geometry("292x343")
+form1.geometry("292x301")
 
 #show info function
 def msg():
